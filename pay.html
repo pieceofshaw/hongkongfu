@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0f1115">
-  <title>My Mobile Site</title>
+  <title>My Mobile Site · Pay</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="home">
+<body data-page="pay">
   <header>
   <div class="bar">
     <div class="brand">My Mobile Site</div>
@@ -15,18 +15,11 @@
   </div>
 </header>
   <main class="wrap">
-    <section id="home">
-      <div class="card hero">
-        <img src="assets/cover.jpg" alt="封面">
-        <div>
-          <h1>My Mobile Site</h1>
-          <p>My Mobile Site</p>
-        </div>
-      </div>
-      <div class="card" style="margin-top:12px">
-        <p>快速入口：</p>
-        <p><a class="btn" href="gallery.html">🖼️ 查看图片</a>
-           <a class="btn" href="audio.html" style="margin-left:8px">🎧 播放音频</a></p>
+    <section id="pay">
+      <h2>收款二维码</h2>
+      <div class="card" style="max-width:280px">
+        <img src="assets/pay-qr.png" alt="扫码支付二维码">
+        <p>此处仅展示二维码用于线下扫码；网页内直连支付需第三方支付网关。</p>
       </div>
     </section>
   </main>
@@ -38,6 +31,6 @@
   <a href="pay.html" data-page="pay"><div class="emoji">💰</div>Pay</a>
 </nav>
 <script src="script.js"></script>
-<script>document.body.setAttribute('data-page', 'home');</script>
+<script>document.body.setAttribute('data-page', 'pay');</script>
 </body>
 </html>

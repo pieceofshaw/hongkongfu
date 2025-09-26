@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0f1115">
-  <title>My Mobile Site</title>
+  <title>My Mobile Site · Map</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="home">
+<body data-page="map">
   <header>
   <div class="bar">
     <div class="brand">My Mobile Site</div>
@@ -15,19 +15,10 @@
   </div>
 </header>
   <main class="wrap">
-    <section id="home">
-      <div class="card hero">
-        <img src="assets/cover.jpg" alt="封面">
-        <div>
-          <h1>My Mobile Site</h1>
-          <p>My Mobile Site</p>
-        </div>
-      </div>
-      <div class="card" style="margin-top:12px">
-        <p>快速入口：</p>
-        <p><a class="btn" href="gallery.html">🖼️ 查看图片</a>
-           <a class="btn" href="audio.html" style="margin-left:8px">🎧 播放音频</a></p>
-      </div>
+    <section id="map">
+      <h2>地图导航</h2>
+      <iframe class="map" src="https://www.google.com/maps?q=35.6812,139.7671&hl=zh-CN&z=14&output=embed" loading="lazy"></iframe>
+      <p>修改地图位置：在 <code>map.html</code> 中把 <code>q=</code> 参数替换为你的经纬度或地址。</p>
     </section>
   </main>
   <nav class="nav" aria-label="底部导航">
@@ -38,6 +29,6 @@
   <a href="pay.html" data-page="pay"><div class="emoji">💰</div>Pay</a>
 </nav>
 <script src="script.js"></script>
-<script>document.body.setAttribute('data-page', 'home');</script>
+<script>document.body.setAttribute('data-page', 'map');</script>
 </body>
 </html>

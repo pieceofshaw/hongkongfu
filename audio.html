@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0f1115">
-  <title>My Mobile Site</title>
+  <title>My Mobile Site · Audio</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="home">
+<body data-page="audio">
   <header>
   <div class="bar">
     <div class="brand">My Mobile Site</div>
@@ -15,19 +15,16 @@
   </div>
 </header>
   <main class="wrap">
-    <section id="home">
-      <div class="card hero">
-        <img src="assets/cover.jpg" alt="封面">
-        <div>
-          <h1>My Mobile Site</h1>
-          <p>My Mobile Site</p>
-        </div>
+    <section id="audio">
+      <h2>音频播放</h2>
+      <div class="card">
+        <audio id="player1" controls preload="none" src="assets/audio1.m4a"></audio>
+        <p>支持 mp3/m4a/wav/ogg；如无法播放，检查文件名与路径。</p>
       </div>
-      <div class="card" style="margin-top:12px">
-        <p>快速入口：</p>
-        <p><a class="btn" href="gallery.html">🖼️ 查看图片</a>
-           <a class="btn" href="audio.html" style="margin-left:8px">🎧 播放音频</a></p>
-      </div>
+<ul id="tracks" class="card">
+  <li style="margin:6px 0"><button data-src="assets/audio1.m4a">Track 1: audio1.m4a</button></li>
+</ul>
+
     </section>
   </main>
   <nav class="nav" aria-label="底部导航">
@@ -38,6 +35,14 @@
   <a href="pay.html" data-page="pay"><div class="emoji">💰</div>Pay</a>
 </nav>
 <script src="script.js"></script>
-<script>document.body.setAttribute('data-page', 'home');</script>
+<script>document.body.setAttribute('data-page', 'audio');</script>
+  <script>
+    const p = document.getElementById('player1');
+    const list = document.getElementById('tracks');
+    if(list) list.addEventListener('click', e=>{
+      const btn = e.target.closest('button[data-src]');
+      if(btn){ p.src = btn.dataset.src; p.play(); }
+    });
+  </script>
 </body>
 </html>

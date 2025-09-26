@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0f1115">
-  <title>My Mobile Site</title>
+  <title>My Mobile Site · Gallery</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="home">
+<body data-page="gallery">
   <header>
   <div class="bar">
     <div class="brand">My Mobile Site</div>
@@ -15,18 +15,17 @@
   </div>
 </header>
   <main class="wrap">
-    <section id="home">
-      <div class="card hero">
-        <img src="assets/cover.jpg" alt="封面">
-        <div>
-          <h1>My Mobile Site</h1>
-          <p>My Mobile Site</p>
-        </div>
-      </div>
-      <div class="card" style="margin-top:12px">
-        <p>快速入口：</p>
-        <p><a class="btn" href="gallery.html">🖼️ 查看图片</a>
-           <a class="btn" href="audio.html" style="margin-left:8px">🎧 播放音频</a></p>
+    <section id="gallery">
+      <h2>图片展示</h2>
+      <div class="grid">
+  <div class="card"><img src="assets/img1.jpg" alt="img1.jpg"></div>
+  <div class="card"><img src="assets/img2.jpg" alt="img2.jpg"></div>
+  <div class="card"><img src="assets/img3.jpg" alt="img3.jpg"></div>
+  <div class="card"><img src="assets/img4.jpg" alt="img4.jpg"></div>
+  <div class="card"><img src="assets/img5.jpg" alt="img5.jpg"></div>
+  <div class="card"><img src="assets/img6.jpg" alt="img6.jpg"></div>
+  <div class="card"><img src="assets/img7.jpg" alt="img7.jpg"></div>
+  <div class="card"><img src="assets/img8.jpg" alt="img8.jpg"></div>
       </div>
     </section>
   </main>
@@ -38,6 +37,6 @@
   <a href="pay.html" data-page="pay"><div class="emoji">💰</div>Pay</a>
 </nav>
 <script src="script.js"></script>
-<script>document.body.setAttribute('data-page', 'home');</script>
+<script>document.body.setAttribute('data-page', 'gallery');</script>
 </body>
 </html>

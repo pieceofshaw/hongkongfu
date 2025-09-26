@@ -1,21 +1,14 @@
-# GitHub Pages Mobile Site (Auto-built)
+# Multi-page Mobile Site (GitHub Pages)
 
-## What I detected
-- Title: My Mobile Site
-- Subtitle: Replace images/audio/map/QR in /assets
-- Map query: 35.6812,139.7671
-- Cover: cover.jpg
-- Gallery images: img1.jpg, img2.jpg, img3.jpg, img4.jpg, img5.jpg, img6.jpg, img7.jpg, img8.jpg
-- QR image: pay-qr.png
-- Audio: assets/audio1.m4a
+Pages: `index.html`, `gallery.html`, `audio.html`, `map.html`, `pay.html`  
+Shared assets in `/assets`. Edit `style.css` to quickly change brand color / radius.
 
-## Deploy (GitHub Pages)
-1) Create a **Public** repository on GitHub.
-2) Upload all files in this folder (not the outer folder itself).
-3) Repo **Settings → Pages** → **Source: Deploy from a branch**. Select your default branch (e.g., `main`) and folder `/` or `/root`. Save.
-4) Wait for the build. Your site will be live at: `https://USERNAME.github.io/REPO/`.
+## Deploy
+1) Upload all files in this folder to your repo root.
+2) Settings → Pages → Source: Deploy from a branch (branch = main/master, folder = /).
+3) Wait for build → Open https://USERNAME.github.io/REPO/
 
-## Replace assets
-- Replace images in `/assets`, keep names.
-- If you change the audio filename, update the `src` in `index.html` accordingly.
-- To change the map, modify the `q=` parameter in the Google Maps iframe.
+## Tips
+- Put gallery images as img1.jpg, img2.jpg... in /assets
+- First audio in /assets is preloaded; extra audio files appear as a playlist.
+- Change map location by editing `q=` in `map.html` iframe.
