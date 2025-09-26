@@ -4,40 +4,45 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0f1115">
-  <title>My Mobile Site</title>
+  <title>Hong Kong FU</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="home">
   <header>
-  <div class="bar">
-    <div class="brand">My Mobile Site</div>
-    <a class="btn" href="audio.html" aria-label="播放音频">▶ Play</a>
-  </div>
-</header>
+    <div class="bar">
+      <div class="brand">Hong Kong FU</div>
+      <a class="btn" href="trips/hk.html">🧭 View Trip</a>
+    </div>
+  </header>
+
   <main class="wrap">
     <section id="home">
-      <div class="card hero">
-        <img src="assets/cover.jpg" alt="封面">
+      <div class="card hero reveal">
+        <img src="assets/cover.jpg" alt="Cover">
         <div>
-          <h1>My Mobile Site</h1>
-          <p>My Mobile Site</p>
+          <h1>Hong Kong · 3h City Walk</h1>
+          <p>一条紧凑、可步行的城市线索：从海风、老茶室到霓虹小巷。页面中含图片、音频导览、地图与二维码。</p>
         </div>
       </div>
-      <div class="card" style="margin-top:12px">
-        <p>快速入口：</p>
-        <p><a class="btn" href="gallery.html">🖼️ 查看图片</a>
-           <a class="btn" href="audio.html" style="margin-left:8px">🎧 播放音频</a></p>
+
+      <div class="card reveal" style="margin-top:12px">
+        <h2>What's inside</h2>
+        <ul>
+          <li>精选图片相册（压缩优化，加载快速）</li>
+          <li>音频讲解（mp3/m4a，移动端可直接播放）</li>
+          <li>地图定位与集合点</li>
+          <li>二维码收款区（线下扫码）</li>
+        </ul>
+        <p><a class="btn" href="trips/hk.html">开始体验这个行程</a></p>
       </div>
     </section>
   </main>
+
+  <!-- 可选底部导航：仅保留两个入口，避免死链 -->
   <nav class="nav" aria-label="底部导航">
-  <a href="index.html" data-page="home"><div class="emoji">🏠</div>Home</a>
-  <a href="gallery.html" data-page="gallery"><div class="emoji">🖼️</div>Gallery</a>
-  <a href="audio.html" data-page="audio"><div class="emoji">🎧</div>Audio</a>
-  <a href="map.html" data-page="map"><div class="emoji">🗺️</div>Map</a>
-  <a href="pay.html" data-page="pay"><div class="emoji">💰</div>Pay</a>
-</nav>
-<script src="script.js"></script>
-<script>document.body.setAttribute('data-page', 'home');</script>
+    <a href="index.html" data-page="home" class="active"><div class="emoji">🏠</div>Home</a>
+    <a href="trips/hk.html" data-page="trip"><div class="emoji">🧭</div>Trip</a>
+  </nav>
+  <script src="script.js"></script>
 </body>
 </html>
