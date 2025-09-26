@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f1115">
+  <title>已解锁 · Full Audio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="trip">
+  <header>
+    <div class="bar">
+      <div class="brand">Hong Kong · Full Audio</div>
+      <a class="btn" href="trips/hk.html">⟵ Back to Trip</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card reveal">
+      <h2>感谢支持！这是完整版音频与下载</h2>
+      <p class="note">若你是通过真实支付跳转到此页，请收藏此页链接。音频仅供个人使用；内容会持续更新。</p>
+    </section>
+
+    <section class="card stop reveal">
+      <h3>Stop 3 · 中环立面与阴影（长版 2’30”）</h3>
+      <audio controls preload="none" src="assets/hk-stop3-long.mp3"></audio>
+      <p class="note">找“反射缝”的方法与换位：风大时先在幕墙对面观察 30 秒。</p>
+    </section>
+
+    <section class="card stop reveal">
+      <h3>Stop 4 · 半山梯级的呼吸（长版 2’10”）</h3>
+      <audio controls preload="none" src="assets/hk-stop4-long.mp3"></audio>
+      <p class="note">人流高峰用“错峰停留位”；遇施工改走后街上行再回主线。</p>
+    </section>
+
+    <section class="card stop reveal">
+      <h3>Stop 5 · 茶室收束（长版 3’00”）</h3>
+      <audio controls preload="none" src="assets/hk-stop5-long.mp3"></audio>
+      <p class="note">点单建议与礼仪；若满座，备用茶室与步行 8 分钟替代点。</p>
+    </section>
+
+    <section class="card reveal">
+      <h2>可下载资源</h2>
+      <ul>
+        <li><a href="assets/hk-route-map.pdf" download>路线地图（PDF）</a></li>
+        <li><a href="assets/hk-waypoints.gpx" download>Waypoints（GPX）</a></li>
+      </ul>
+      <p class="note">以上为占位；准备好对应文件后放到 <code>/assets</code> 并保持同名即可。</p>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="底部导航">
+    <a href="index.html" data-page="home"><div class="emoji">🏠</div>Home</a>
+    <a href="trips/hk.html" data-page="trip" class="active"><div class="emoji">🧭</div>Trip</a>
+  </nav>
+
+  <script src="script.js"></script>
+  <script>
+    window.plausible && plausible('purchase');
+    window.gtag && gtag('event','purchase',{page:location.pathname});
+  </script>
+</body>
+</html>
