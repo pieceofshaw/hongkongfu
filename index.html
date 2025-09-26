@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f1115">
+  <title>My Mobile Site</title>
+  <style>
+    :root{
+      --bg:#0f1115; --card:#151925; --line:#2a2f3a; --text:#eaecee; --muted:#9aa0a6; --brand:#3b82f6;
+      --radius:14px; --space:14px; --wrap:960px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .wrap{max-width:var(--wrap);margin:0 auto;padding:calc(var(--space)*1.2) var(--space) calc(72px + env(safe-area-inset-bottom) + var(--space));}
+    header{position:sticky;top:0;z-index:10;backdrop-filter:saturate(140%) blur(6px);background:color-mix(in srgb, var(--bg) 80%, transparent);border-bottom:1px solid var(--line)}
+    .bar{max-width:var(--wrap);margin:0 auto;padding:10px var(--space);display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:700}
+    .btn{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:8px 12px}
+
+    h1{font-size:22px;margin:10px 0 8px}
+    h2{font-size:18px;margin:22px 0 10px}
+    p{margin:6px 0;color:var(--muted)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media (min-width:680px){ .grid{grid-template-columns:repeat(3,1fr);} }
+
+    .hero{display:flex;gap:12px;align-items:center}
+    .hero img{width:72px;height:72px;border-radius:14px;object-fit:cover;border:1px solid var(--line)}
+
+    audio{width:100%}
+    .map{width:100%;height:360px;border:0;border-radius:12px}
+
+    section{scroll-margin-top:64px;margin-top:18px}
+
+    .nav{
+      position:fixed;left:0;right:0;bottom:0;z-index:20;
+      padding:8px calc(var(--space) - 2px) calc(env(safe-area-inset-bottom) + 8px);
+      background:color-mix(in srgb, var(--bg) 85%, #05060a 15%);
+      border-top:1px solid var(--line);
+      display:flex;gap:10px;justify-content:space-between;
+    }
+    .nav a{
+      flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+      gap:2px;padding:8px 0;border-radius:10px;color:var(--muted);font-size:12px
+    }
+    .nav a.active{background:var(--card);color:#fff;border:1px solid var(--line)}
+    .emoji{font-size:18px;line-height:1}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <div class="brand">My Mobile Site</div>
+      <a class="btn" href="#audio" aria-label="播放音频">▶ Play</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="home">
+      <div class="card hero">
+        <img src="assets/cover.jpg" alt="封面">
+        <div>
+          <h1>My Mobile Site</h1>
+          <p>Replace images/audio/map/QR in /assets</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>图片展示</h2>
+      <div class="grid">
+        <div class="card"><img src="assets/img1.jpg" alt="图1"></div>
+        <div class="card"><img src="assets/img2.jpg" alt="图2"></div>
+        <div class="card"><img src="assets/img3.jpg" alt="图3"></div>
+        <div class="card"><img src="assets/img4.jpg" alt="图4"></div>
+        <div class="card"><img src="assets/img5.jpg" alt="图5"></div>
+        <div class="card"><img src="assets/img6.jpg" alt="图6"></div>
+        <div class="card"><img src="assets/img7.jpg" alt="图7"></div>
+        <div class="card"><img src="assets/img8.jpg" alt="图8"></div>
+      </div>
+    </section>
+
+    <section id="audio">
+      <h2>音频播放</h2>
+      <div class="card">
+        <audio id="player1" controls preload="none" src="assets/audio1.m4a"></audio>
+        <p>若无法播放，请确保已上传正确的音频文件并与此路径匹配。</p>
+      </div>
+    </section>
+
+    <section id="map">
+      <h2>地图导航</h2>
+      <iframe class="map" src="https://www.google.com/maps?q=35.6812,139.7671&hl=zh-CN&z=14&output=embed" loading="lazy"></iframe>
+      <p>你可以在源码中修改 <code>q=</code> 参数来变更位置。</p>
+    </section>
+
+    <section id="pay">
+      <h2>收款二维码</h2>
+      <div class="card" style="max-width:280px">
+        <img src="assets/pay-qr.png" alt="扫码支付二维码">
+        <p>此处仅展示二维码用于线下扫码；网页内直连支付需第三方支付网关。</p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="底部导航">
+    <a href="#home" class="active"><div class="emoji">🏠</div>Home</a>
+    <a href="#gallery"><div class="emoji">🖼️</div>Gallery</a>
+    <a href="#audio"><div class="emoji">🎧</div>Audio</a>
+    <a href="#map"><div class="emoji">🗺️</div>Map</a>
+    <a href="#pay"><div class="emoji">💰</div>Pay</a>
+  </nav>
+
+  <script>
+    const navLinks = Array.from(document.querySelectorAll('.nav a'));
+    const sections = navLinks.map(a => document.querySelector(a.getAttribute('href')));
+    const onScroll = () => {
+      const y = window.scrollY + 70;
+      let idx = 0;
+      sections.forEach((sec, i) => { if (sec && sec.offsetTop <= y) idx = i; });
+      navLinks.forEach((a,i)=> a.classList.toggle('active', i===idx));
+    };
+    document.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  </script>
+</body>
+</html>
